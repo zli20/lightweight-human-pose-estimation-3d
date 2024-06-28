@@ -1,0 +1,14 @@
+build/*
+out/*
+*.vscode*
+*.vs
+CmakePresets.json
+3rdparty/*
+!3rdparty/.gitkeep
+x64/*
+
+*.sln
+*.vcxproj
+*.filters
+*.user
+
