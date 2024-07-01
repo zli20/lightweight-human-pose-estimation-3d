@@ -6,6 +6,13 @@
 #include "PoseDetect.h"
 #include <fstream>
 
+#include <opencv2/core/utils/logger.hpp>
+void ConfigureLogging() {
+#include <opencv2/core/utils/logger.hpp>
+    cv::utils::logging::setLogLevel(cv::utils::logging::LOG_LEVEL_SILENT);
+    //cv::utils::logging::setLogLevel(cv::utils::logging::LOG_LEVEL_ERROR);//只输出错误日志
+}
+
 bool check_absolute_path(std::string relative_path) {
     char full_path[MAX_PATH];
     std::string absolute_path;
@@ -23,6 +30,9 @@ bool check_absolute_path(std::string relative_path) {
 
 
 int main() {
+    // 使denbug下opencv不输出log
+    ConfigureLogging();
+
 	std::string path = "./models/human-pose-estimation-3d.onnx";
     bool file_exists  = check_absolute_path(path);
     if (!file_exists) {

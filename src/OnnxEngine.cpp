@@ -1,7 +1,6 @@
 #include "OnnxEngine.h"
 #include <numeric>
 #include <filesystem>
-#include <onnxruntime_c_api.h>
 
 OnnxEngine::OnnxEngine() : _ortEnv(nullptr), _ortSession(nullptr)
 {
