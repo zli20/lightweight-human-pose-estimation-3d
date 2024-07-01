@@ -7,7 +7,7 @@
 #include "OnnxEngine.h"
 
 
-class MCP_API PoseDetect :public OnnxEngine
+class PoseDetect :public OnnxEngine
 {
 public:
 	PoseDetect();

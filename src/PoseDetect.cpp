@@ -132,7 +132,7 @@ void PoseDetect::getInference(const cv::Mat& input_mat)
 	imshow("Pose3d", input_mat_draw);
 	cv::waitKey(1);
 
-	savePose3dToTxt(this->_pose3d, "pose3d.txt");
+	// savePose3dToTxt(this->_pose3d, "pose3d.txt");
 }
 
 void PoseDetect::preProcess(cv::Mat& input_mat)

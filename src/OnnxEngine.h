@@ -8,10 +8,9 @@
 
 #include <onnxruntime_cxx_api.h>
 #include <opencv2/opencv.hpp>
-#include "../export.h"
 
 // onnxruntime推理类
-class MCP_API OnnxEngine
+class OnnxEngine
 {
 public:
 	OnnxEngine();
@@ -24,7 +23,7 @@ public:
     int device_id ： cuda设备id ，用于cuda推理，默认取0
     int threads ： onnx内部运算时线程参数, 影响推理速度，需要根据推理设备进行设置，默认取0，并不是最优值
     */
-	int init(const std::string& model_path, int device=0, int is_cuda=0, int threads=0);
+	int init(const std::string& model_path, int is_cuda=0, int device = 0, int threads=0);
 
     // 推理，输入预处理后的图像，结果传入 _out_data_ptr
     void inference(const cv::Mat &input);
