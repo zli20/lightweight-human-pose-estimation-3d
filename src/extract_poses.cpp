@@ -4,6 +4,7 @@
 #include "peak.hpp"
 
 namespace human_pose_estimation {
+
 static void resizeFeatureMaps(std::vector<cv::Mat>& featureMaps, int upsampleRatio) {
     for (auto& featureMap : featureMaps) {
         cv::resize(featureMap, featureMap, cv::Size(),
